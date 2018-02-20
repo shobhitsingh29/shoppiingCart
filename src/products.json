@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Sleek Wall Clock",
+        "price": 120,
+        "image": "src/assets/product-1.png",
+        "category": "HOME DECOR"
+    },
+    {
+        "id": 2,
+        "name": "Single Chair",
+        "price": 60,
+        "image": "src/assets/product-2.png",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 3,
+        "name": "Matt Finish Stool",
+        "price": 48,
+        "image": "src/assets/product-3.png",
+        "category": "HOME DECOR"
+    },
+    {
+        "id": 4,
+        "name": "Cotton Backpack",
+        "price": 32,
+        "image": "src/assets/product-4.png",
+        "category": "HOME DECOR"
+    },
+    {
+        "id": 5,
+        "name": "Air Tight Container",
+        "price": 56,
+        "image": "src/assets/product-5.png",
+        "category": "HOME DECOR"
+    },
+    {
+        "id": 6,
+        "name": "Side Table",
+        "price": 16,
+        "image": "src/assets/product-6.png",
+        "category": "HOME DECOR"
+    },
+    {
+        "id": 7,
+        "name": "Ceramic Carrier",
+        "price": 82,
+        "image": "src/assets/product-7.png",
+        "category": "HOME DECOR"
+    },
+    {
+        "id": 8,
+        "name": "Succulent Vase",
+        "price": 35,
+        "image": "src/assets/product-8.png",
+        "category": "HOME DECOR"
+    }
+]
