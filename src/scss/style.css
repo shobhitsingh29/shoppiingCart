@@ -9589,6 +9589,13 @@ a button.btn-ctn {
 
 }
 .total-div{
+    position: relative;
+    left: 965px;
+    font-size: 21px;
+    width: 142px;
+}
+.total-div span{
+    color: #ff6c75;
 
 }
 .cart-item .product-total .amount:before {

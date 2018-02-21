@@ -8,11 +8,11 @@ import Footer from './components/Footer';
 import QuickView from './components/QuickView';
 
 
-import { BrowserRouter as Router } from 'react-router-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
 import './scss/style.css';
 
-class Home extends Component{
-    constructor(){
+class Home extends Component {
+    constructor() {
         super();
         this.state = {
             products: [],
@@ -22,7 +22,7 @@ class Home extends Component{
             term: '',
             category: '',
             cartBounce: false,
-            quantity : 1,
+            quantity: 1,
             quickViewProduct: {},
             modalActive: false
         };
@@ -38,8 +38,9 @@ class Home extends Component{
         this.openModal = this.openModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
     }
+
     // Fetch Initial Set of Products from external API
-    getProducts(){
+    getProducts() {
         //For Localhost use the below url
         const url = "src/products.json";
 
@@ -49,33 +50,37 @@ class Home extends Component{
         axios.get(url)
             .then(response => {
                 this.setState({
-                    products : response.data
+                    products: response.data
                 })
             })
     }
-    componentWillMount(){
+
+    componentWillMount() {
         this.getProducts();
     }
 
     // Search by Keyword
-    handleSearch(event){
+    handleSearch(event) {
         this.setState({term: event.target.value});
     }
+
     // Mobile Search Reset
-    handleMobileSearch(){
+    handleMobileSearch() {
         this.setState({term: ""});
     }
+
     // Filter by Category
-    handleCategory(event){
+    handleCategory(event) {
         this.setState({category: event.target.value});
         console.log(this.state.category);
     }
+
     // Add to Cart
-    handleAddToCart(selectedProducts){
+    handleAddToCart(selectedProducts) {
         let cartItem = this.state.cart;
         let productID = selectedProducts.id;
         let productQty = selectedProducts.quantity;
-        if(this.checkProduct(productID)){
+        if (this.checkProduct(productID)) {
             console.log('hi');
             let index = cartItem.findIndex((x => x.id == productID));
             cartItem[index].quantity = Number(cartItem[index].quantity) + Number(productQty);
@@ -86,21 +91,22 @@ class Home extends Component{
             cartItem.push(selectedProducts);
         }
         this.setState({
-            cart : cartItem,
+            cart: cartItem,
             cartBounce: true,
         });
-        setTimeout(function(){
+        setTimeout(function () {
             this.setState({
-                cartBounce:false,
+                cartBounce: false,
                 quantity: 1
             });
             console.log(this.state.quantity);
             console.log(this.state.cart);
-        }.bind(this),1000);
+        }.bind(this), 1000);
         this.sumTotalItems(this.state.cart);
         this.sumTotalAmount(this.state.cart);
     }
-    handleRemoveProduct(id, e){
+
+    handleRemoveProduct(id, e) {
         let cart = this.state.cart;
         let index = cart.findIndex((x => x.id == id));
         cart.splice(index, 1);
@@ -111,13 +117,15 @@ class Home extends Component{
         this.sumTotalAmount(this.state.cart);
         e.preventDefault();
     }
-    checkProduct(productID){
+
+    checkProduct(productID) {
         let cart = this.state.cart;
-        return cart.some(function(item) {
+        return cart.some(function (item) {
             return item.id === productID;
         });
     }
-    sumTotalItems(){
+
+    sumTotalItems() {
         let total = 0;
         let cart = this.state.cart;
         total = cart.length;
@@ -125,10 +133,11 @@ class Home extends Component{
             totalItems: total
         })
     }
-    sumTotalAmount(){
+
+    sumTotalAmount() {
         let total = 0;
         let cart = this.state.cart;
-        for (var i=0; i<cart.length; i++) {
+        for (var i = 0; i < cart.length; i++) {
             total += cart[i].price * parseInt(cart[i].quantity);
         }
         this.setState({
@@ -137,28 +146,30 @@ class Home extends Component{
     }
 
     //Reset Quantity
-    updateQuantity(qty){
+    updateQuantity(qty) {
         console.log("quantity added...")
         this.setState({
             quantity: qty
         })
     }
+
     // Open Modal
-    openModal(product){
+    openModal(product) {
         this.setState({
             quickViewProduct: product,
             modalActive: true
         })
     }
+
     // Close Modal
-    closeModal(){
+    closeModal() {
         this.setState({
             modalActive: false
         })
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <div className="container">
                 <Header
                     cartBounce={this.state.cartBounce}
@@ -181,8 +192,9 @@ class Home extends Component{
                     updateQuantity={this.updateQuantity}
                     openModal={this.openModal}
                 />
-                <Footer />
-                <QuickView product={this.state.quickViewProduct} openModal={this.state.modalActive} closeModal={this.closeModal} />
+                <Footer/>
+                <QuickView product={this.state.quickViewProduct} openModal={this.state.modalActive}
+                           closeModal={this.closeModal}/>
             </div>
         )
     }

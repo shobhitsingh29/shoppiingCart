@@ -92,10 +92,7 @@ class Cartpreview extends Component {
                     {this.items(this.cartItems)}
 
 
-                    <div className="total-div">Total:{this.state.total}
-                    </div>
-
-                    <div>
+                    <div className="total-div">Total: <span>RS. {this.state.total}</span>
                     </div>
                     <Link to='/checkout'>
                         <div>
