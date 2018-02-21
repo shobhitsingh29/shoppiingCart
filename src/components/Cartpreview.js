@@ -59,11 +59,11 @@ class Cartpreview extends Component {
                                 var total = this.state.total;
                                 total -= value.price;
                                 this.setState({total});
-
+                                localStorage.setItem("cartTotal", JSON.stringify(total));
                             }
                             return !(value.name.includes(e.target.parentNode.innerText.replace("\n").split(" ")[1].split("\n")[0]));
                         });
-                        localStorage.setItem("cartTotal", JSON.stringify(this.state.total));
+
                         localStorage.setItem('cartItem', JSON.stringify(setStorage));
                         e.target.parentNode.remove();
                         console.log(this.state.total);

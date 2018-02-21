@@ -1,34 +1,18 @@
-# React Shopping Cart
-Simple React Shopping Cart without using Redux
+This repository contains code for shoppiingCart
 
-![React Shopping Cart Preview](https://res.cloudinary.com/sivadass/image/upload/v1494752103/gifs/react-shopping-cart.gif)
+For running this app on local development server, you need to have NodeJS(along with npm) environment installed in your computer.
+It is tested with Node version v6.9.5.
 
-## Live Demo
-[https://sivadass.github.io/react-shopping-cart/](https://sivadass.github.io/react-shopping-cart/)
+For running this app, you need to have access Token for open api which you can insert in 'accessToken' field in respective module pages.
 
-## Setup
+##How to start application
 
-Goto the project folder and install required dependencies:
-```
-npm install
-```
+ # Development mode
 
-And run Webpack to watch for code changes and bundle js and scss files:
-```
-webpack
-```
-
-For production build:
-
-```
-webpack -p
-```
-
-Now open **index.html** in your browser to view the live page.
-
-### Additional Info
-* You may get **CORS** error, when running this app in your local machine. Open index.js and use **products.json** as url.
-
-![CORS Error](https://res.cloudinary.com/sivadass/image/upload/v1495422162/screen-shots/url.png)
-
-* I used localhost of my Wamp server to run this app, you can even use [webpack-dev-server](https://webpack.github.io/docs/webpack-dev-server.html) to  create a handy *http* server or any other of your choice.
+ ```
+ git clone https://github.com/shobhitsingh29/shoppiingCart.git
+ cd shoppiingCart
+ git checkout master
+ npm install
+ npm start
+ ```
