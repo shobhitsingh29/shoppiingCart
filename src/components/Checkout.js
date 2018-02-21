@@ -18,53 +18,10 @@ class Checkout extends Component {
         };
     }
 
-    handleCart(e) {
-        e.preventDefault();
-        this.setState({
-            showCart: !this.state.showCart
-        })
-    }
-
-    handleSubmit(e) {
-        e.preventDefault();
-    }
-
-    handleMobileSearch(e) {
-        e.preventDefault();
-        this.setState({
-            mobileSearch: true
-        })
-    }
-
-    handleSearchNav(e) {
-        e.preventDefault();
-        this.setState({
-            mobileSearch: false
-        }, function () {
-            this.refs.searchBox.value = "";
-            this.props.handleMobileSearch();
-        })
-    }
-
-    handleClickOutside(event) {
-        const cartNode = findDOMNode(this.refs.cartPreview);
-        const buttonNode = findDOMNode(this.refs.cartButton);
-        if (cartNode.classList.contains('active')) {
-            if (!cartNode || !cartNode.contains(event.target)) {
-                this.setState({
-                    showCart: false
-                })
-                event.stopPropagation();
-            }
-        }
-    }
 
     componentDidMount() {
-        document.addEventListener('click', this.handleClickOutside.bind(this), true);
-    }
 
-    componentWillUnmount() {
-        document.removeEventListener('click', this.handleClickOutside.bind(this), true);
+        localStorage.clear();
     }
 
     render() {

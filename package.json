@@ -12,8 +12,8 @@
     "shopping",
     "cart"
   ],
-  "author": "Sivadass",
-  "license": "ISC",
+  "author": "shobhit",
+  "license": "",
   "dependencies": {
 
     "react-router-dom": "4.1.1",

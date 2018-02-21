@@ -1,11 +1,7 @@
 @font-face {
-    font-family:Montserrat;
+    font-family: Montserrat;
     src: url("./../assets/fonts/montserrat-bold-webfont.woff");
 }
-
-
-
-
 
 /*!
  * Bootstrap v4.0.0 (https://getbootstrap.com)
@@ -49,7 +45,7 @@
 }
 
 html {
-    font-family:Montserrat;
+    font-family: Montserrat;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
@@ -58,7 +54,7 @@ html {
 }
 
 @-ms-viewport {
-    width: device-width
+    width: device-width;
 }
 
 article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -67,7 +63,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
     margin: 0;
-    font-family:Montserrat, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: Montserrat, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -186,7 +182,7 @@ a:not([href]):not([tabindex]):focus {
 }
 
 code, kbd, pre, samp {
-    font-family:Montserrat monospace;
+    font-family: Montserrat monospace;
     font-size: 1em
 }
 
@@ -374,7 +370,8 @@ template {
     font-size: 1.25rem;
     font-weight: 300
 }
-a button.continue-btn{
+
+a button.continue-btn {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -492,7 +489,7 @@ hr {
 }
 
 code, kbd, pre, samp {
-    font-family:Montserrat, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+    font-family: Montserrat, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
 }
 
 code {
@@ -5380,14 +5377,7 @@ button.close {
 
 .modal {
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1050;
-    display: none;
-    overflow: hidden;
-    outline: 0
+    outline: 0;
 }
 
 .modal-open .modal {
@@ -5476,19 +5466,20 @@ button.close {
     border-top-left-radius: .3rem;
     border-top-right-radius: .3rem
 }
-header{
-    left: 0;
-    right:0;
 
+header {
+    left: 0;
+    right: 0;
 
 }
 
-footer{
+footer {
     position: absolute;
-    left:0;
-    right:0;
+    left: 0;
+    right: 0;
     animation: slideUp .3s linear;
 }
+
 .modal-header .close {
     padding: 1rem;
     margin: -1rem -1rem -1rem auto
@@ -5563,7 +5554,7 @@ footer{
     z-index: 1070;
     display: block;
     margin: 0;
-    font-family:Montserrat, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: Montserrat, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
@@ -5676,7 +5667,7 @@ footer{
     z-index: 1060;
     display: block;
     max-width: 276px;
-    font-family:Montserrat, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: Montserrat, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
@@ -9110,7 +9101,8 @@ a.text-dark:focus, a.text-dark:hover {
     object-fit: contain;
     color: #40444f;
 }
-.cart-view{
+
+.cart-view {
     width: 1108px;
     border: solid 1px #e3e3e3;
 }
@@ -9139,12 +9131,12 @@ body {
 }
 
 ::selection {
-    background: #077915;
+    background: black;
     color: #fff
 }
 
 ::-moz-selection {
-    background: #077915;
+    background: black;
     color: #fff;
     text-shadow: none
 }
@@ -9184,17 +9176,17 @@ button {
     border-radius: 2px;
     text-align: center;
     color: #fff;
-    background: #077915;
+    background: black;
     border: 0;
     font-weight: 400;
     padding: 0 16px;
-    font-family:Montserrat ;
+    font-family: Montserrat;
     font-size: inherit;
     cursor: pointer
 }
 
 button:hover {
-    background: #0aa91d
+    background: grey;
 }
 
 button:focus {
@@ -9202,12 +9194,14 @@ button:focus {
 }
 
 button:active {
-    background: #0bc122
+    background: grey;
 }
 
 input, select {
     font-size: inherit;
-    font-family:Montserrat;}
+    font-family: Montserrat;
+}
+
 form {
     margin: 0
 }
@@ -9314,7 +9308,7 @@ header .container {
 
 .search-form .search-keyword {
     height: 36px;
-    border: 1px solid #077915;
+    border: 1px solid black;
     padding: 0 16px;
     border-radius: 2px 0 0 2px;
     width: 100%;
@@ -9336,7 +9330,7 @@ header .container {
 
 .search-form .search-button {
     border-radius: 0 2px 2px 0;
-    background: #077915 url(https://res.cloudinary.com/sivadass/image/upload/v1494692031/icons/search.png) 50% no-repeat;
+    background: black url(https://res.cloudinary.com/sivadass/image/upload/v1494692031/icons/search.png) 50% no-repeat;
     width: 96px
 }
 
@@ -9388,7 +9382,7 @@ header .container {
 
 .cart-info table {
     font-size: 14px;
-    color: #077915;
+    color: black;
     text-align: right
 }
 
@@ -9536,7 +9530,9 @@ header .container {
     display: -webkit-flex;
     align-items: center;
     -webkit-align-items: center;
-    padding: 8px
+    padding: 8px;
+    height: 122px;
+    object-fit: contain;
 }
 
 .cart-item .product-image {
@@ -9564,7 +9560,7 @@ header .container {
 }
 
 .cart-item .product-total {
-    margin-left: 16px
+    margin-right: 16px;
 }
 
 .cart-item .product-total .quantity {
@@ -9574,9 +9570,10 @@ header .container {
 }
 
 .cart-item .product-total .amount {
+    color: #ff6c75;;
     width: 65px;
     height: 22px;
-    font-family:Montserrat;
+    font-family: Montserrat;
     font-size: 18px;
     font-style: normal;
     font-stretch: normal;
@@ -9585,6 +9582,15 @@ header .container {
     text-align: right
 }
 
+a button.btn-ctn {
+    position: relative;
+    left: 91%;
+    bottom: 25px
+
+}
+.total-div{
+
+}
 .cart-item .product-total .amount:before {
     content: "Rs. "
 }
@@ -9882,10 +9888,14 @@ header .container {
 }
 
 .product .product-price {
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 22px;
-    margin-bottom: 16px
+    margin-bottom: 16px;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    color: #ff6c75;
 }
 
 .product .product-price:before {
@@ -9896,6 +9906,11 @@ header .container {
     color: #666;
     padding: 0 16px;
     text-align: center
+}
+
+.product .product-price {
+    color: #ff6c75;
+
 }
 
 .product .product-action {
@@ -9934,13 +9949,13 @@ header .container {
 }
 
 .stepper-input .decrement:hover, .stepper-input .increment:hover {
-    color: #077915;
-    border-color: #077915
+    color: black;
+    border-color: black;
 }
 
 .stepper-input .decrement:active, .stepper-input .increment:active {
     color: #fff;
-    border-color: #077915;
+    border-color: black;
     background: #0bc122
 }
 
@@ -9955,7 +9970,7 @@ header .container {
 
 .stepper-input .quantity:focus {
     outline: none;
-    border-color: #077915
+    border-color: black;
 }
 
 footer {
@@ -9966,9 +9981,10 @@ footer {
     padding: 32px;
     background: #ddd
 }
-.item-div{
 
-min-height: 650px;
+.item-div {
+
+    min-height: 650px;
 }
 
 footer strong {
@@ -9979,11 +9995,11 @@ footer .footer-links {
     margin-bottom: 24px
 }
 
-footer .footer-links ul{
+footer .footer-links ul {
     display: inline-block;
     width: 172px;
     height: 108px;
-    font-family:Montserrat;
+    font-family: Montserrat;
     font-size: 12px;
     font-weight: 600;
     font-style: normal;
@@ -9992,8 +10008,8 @@ footer .footer-links ul{
     letter-spacing: normal;
     color: #40444f;
 
-
 }
+
 footer .footer-links a {
     margin: 0 8px;
     color: #666
@@ -10011,6 +10027,7 @@ footer .footer-links a {
 }
 
 .modal-wrapper.active {
+    left: 0;
     display: flex;
     display: -webkit-flex;
     align-items: center;
@@ -10026,6 +10043,19 @@ footer .footer-links a {
     margin: 16px;
     background: #fff;
     position: relative
+}
+
+.product-category {
+    height: 15px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    text-align: center;
+    line-height: 1.4;
+    letter-spacing: normal;
+    color: #40444f;
 }
 
 .modal-wrapper .close {
@@ -10044,21 +10074,18 @@ footer .footer-links a {
 
 .quick-view-details .product-price {
     font-size: 18px;
-    color: #077915;
+    color: black;
     font-weight: 700;
-    font-size: 24px;
-    float: right
+    float: right;
 }
 
 .quick-view-details .product-price:before {
     content: "Rs. "
 }
 
-.quick-view-image img {
+.modal-wrapper .quick-view-image img {
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
     display: block
 }
-
-/*# sourceMappingURL=style.css.map*/

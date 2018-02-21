@@ -27,8 +27,7 @@ const Footer = (props) => {
                     </li>
                     <li> Careers
                     </li>
-                    <li> Sitemap</li>
-                    <li> Copyright © 2017 Curated.</li>
+                    <li> Copyright © 2017 <span className="product-price">Curated.</span></li>
                 </ul>
                 <ul target="_blank">
                     <h5>POLICY INFO</h5>

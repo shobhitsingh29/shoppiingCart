@@ -2,45 +2,51 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
-  watch: true,
-  context: path.resolve(__dirname, './src'),
-  entry: {
-    app: './index.js',
-  },
-  output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: '[name].bundle.js',
-  },
-  devtool: 'source-map',
-  resolve: {
-    alias: {
-      moment: 'moment/src/moment'
+    watch: true,
+    context: path.resolve(__dirname, './src'),
+    entry: {
+        app: './index.js',
     },
-  },
-  module: {
-    rules: [
-      {
-        test: /\.jsx?$/,
-        include:[path.resolve(__dirname, 'src')],
-        exclude: [path.resolve(__dirname,"node_modules")],
-        use: "babel-loader"
-      },
-        {
-            test: /\.css/,
-            use: [{
-                loader: "style-loader"
-            }, {
-                loader: "css-loader"
-            }]
-
+    output: {
+        path: path.resolve(__dirname, './dist'),
+        filename: '[name].bundle.js',
+    },
+    devtool: 'source-map',
+    resolve: {
+        alias: {
+            moment: 'moment/src/moment'
         },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: "file-loader"
-      }
+    },
+    devServer: {
+        historyApiFallback: true,
+        contentBase: './',
+        hot: true
+    },
+
+    module: {
+        rules: [
+            {
+                test: /\.jsx?$/,
+                include: [path.resolve(__dirname, 'src')],
+                exclude: [path.resolve(__dirname, "node_modules")],
+                use: "babel-loader"
+            },
+            {
+                test: /\.css/,
+                use: [{
+                    loader: "style-loader"
+                }, {
+                    loader: "css-loader"
+                }]
+
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
+                use: "file-loader"
+            }
+        ]
+    },
+    plugins: [
+        new ExtractTextPlugin('style.css'),
     ]
-  },
-  plugins: [
-    new ExtractTextPlugin('style.css'),
-  ]
 };
