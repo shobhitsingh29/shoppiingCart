@@ -14,5 +14,6 @@ For running this app, you need to have access Token for open api which you can i
  cd shoppiingCart
  git checkout master
  npm install
+ webpack
  npm start
  ```
