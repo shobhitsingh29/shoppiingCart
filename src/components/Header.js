@@ -54,10 +54,11 @@ class Header extends Component{
         }
     }
     componentDidMount() {
-      document.addEventListener('click', this.handleClickOutside.bind(this), true);
+        localStorage.clear();
+        document.getElementsByClassName("container")[0].addEventListener('click', this.handleClickOutside.bind(this), false);
     }
     componentWillUnmount() {
-      document.removeEventListener('click', this.handleClickOutside.bind(this), true);
+        document.getElementsByClassName("container")[0].removeEventListener('click', this.handleClickOutside.bind(this), false);
     }
     render(){
         let cartItems;
@@ -66,6 +67,7 @@ class Header extends Component{
 				<li className="cart-item" key={product.name}>
                     <img className="product-image" src={product.image} />
                     <div className="product-info">
+                        <p className="product-category">{product.category}</p>
                         <p className="product-name">{product.name}</p>
                         <p className="product-price">{product.price}</p>
                     </div>
@@ -116,7 +118,7 @@ class Header extends Component{
                                 </tbody>
                             </table>
                         </div>
-                        <Link  to={{ pathname: '/cartpreview', query: { items: this.props.cartItems } }}>
+                        <Link  to={{ pathname: 'cartpreview', query: { items: this.props.cartItems,total:this.props.total} }}>
                             <div className="cart-icon"  ref="cartButton">
                             <img className={this.props.cartBounce ? "tada" : " "} src="https://res.cloudinary.com/sivadass/image/upload/v1493548928/icons/bag.png" alt="Cart"/>
                             {this.props.totalItems ? <span className="cart-count">{this.props.totalItems}</span> : "" }

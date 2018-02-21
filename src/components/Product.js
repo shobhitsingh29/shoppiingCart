@@ -29,9 +29,9 @@ class Product extends Component{
             buttonLabel: "✔ ADDED"
         }, function(){
             setTimeout(() => {
-                this.setState({ 
+                this.setState({
                     buttonLabel: "ADD TO CART",
-                    selectedProduct: {} 
+                    selectedProduct: {}
                 });
             }, 5000);
         });
@@ -59,6 +59,7 @@ class Product extends Component{
                 <div className="product-image">
                     <img src={image} alt={this.props.name} onClick={this.quickView.bind(this, image, name, price, id, quantity)}/>
                 </div>
+                <h4 className="product-category">{this.props.category}</h4>
                 <h4 className="product-name">{this.props.name}</h4>
                 <p className="product-price">{this.props.price}</p>
                 <Counter productQuantity={quantity} updateQuantity={this.props.updateQuantity} resetQuantity={this.resetQuantity}/>

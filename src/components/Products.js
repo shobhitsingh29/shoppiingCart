@@ -12,7 +12,7 @@ class Products extends Component{
     	let productsData;
     	let term = this.props.searchTerm;
     	let x;
-		
+
 		function searchingFor(term){
 			return function(x){
 				return x.name.toLowerCase().includes(term.toLowerCase()) || !term;
@@ -20,7 +20,7 @@ class Products extends Component{
 		}
 		productsData = this.props.productsList.filter(searchingFor(term)).map(product =>{
 			return(
-						<Product key={product.id} price={product.price} name={product.name} image={product.image} id={product.id} addToCart={this.props.addToCart} productQuantity={this.props.productQuantity} updateQuantity={this.props.updateQuantity} openModal={this.props.openModal}/>
+						<Product key={product.id}  price={product.price}  category={product.category}  name={product.name} image={product.image} id={product.id} addToCart={this.props.addToCart} productQuantity={this.props.productQuantity} updateQuantity={this.props.updateQuantity} openModal={this.props.openModal}/>
 				)
 			}
 		);
@@ -35,7 +35,7 @@ class Products extends Component{
 			view = <CSSTransitionGroup
 				transitionName="fadeIn"
 				transitionEnterTimeout={500}
-				transitionLeaveTimeout={300} 
+				transitionLeaveTimeout={300}
 				component="div"
 				className="products">
 					{productsData}
